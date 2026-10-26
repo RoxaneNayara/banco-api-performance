@@ -107,7 +107,14 @@ cd banco-api-performance
 
 Inicie a API conforme as instruções do projeto que a fornece. A inicialização da API não é feita por este repositório.
 
-Confira os dados em `fixtures/postLogin.json`. No teste de login, o campo `username` é sobrescrito pelo valor `julio.lima`; o helper de autenticação utiliza os dados do arquivo diretamente.
+As credenciais utilizadas nos testes são fornecidas por variáveis de ambiente, evitando o versionamento de dados sensíveis no repositório.
+
+Crie um arquivo `.env` local a partir do modelo `.env.example` e informe:
+
+```env
+BASE_URL=http://localhost:3000
+TEST_USERNAME=seu_usuario
+TEST_PASSWORD=sua_senha
 
 No teste de transferências, os dados atuais são:
 
