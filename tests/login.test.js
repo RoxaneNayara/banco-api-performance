@@ -22,7 +22,8 @@ export const options = {
 export default function () {
     const url = pegarBaseURL() + '/login';
 
-    postLogin.username = "julio.lima"
+    postLogin.username = __ENV.TEST_USERNAME;
+    postLogin.senha = __ENV.TEST_PASSWORD;
     const payload = JSON.stringify(postLogin);
 
     const params = {
